@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="audioviz.PlayerController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@player.css" />
+          </stylesheets>
+         <children>
+            <Button layoutX="308.0" layoutY="26.0" mnemonicParsing="false" onAction="#handlePlay" text="Play" />
+            <Button layoutX="365.0" layoutY="26.0" mnemonicParsing="false" onAction="#handlePause" text="Pause" />
+            <Button layoutX="436.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleStop" text="Stop" />
+            <AnchorPane fx:id="vizPane" layoutY="106.0" prefHeight="493.0" prefWidth="800.0" />
+            <Slider fx:id="timeSlider" layoutX="163.0" layoutY="74.0" onMousePressed="#handleSliderMousePressed" onMouseReleased="#handleSliderMouseReleased" prefHeight="16.0" prefWidth="476.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
